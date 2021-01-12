@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block content %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Welcome to the Fairfield University Mask Detector</h1>
+                <p><a class="btn btn-primary btn-lg" href="{{ url_for('predict') }}" role="button">Use the Mask Detector Model... &raquo;</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Why Wear a Mask?</h2>
+                    <p>
+                        Masks help limit the spread of highly contagious viruses such as Covid-19 that can be transmitted via air particles.
+                        Not only is it recommned to wear a mask; it is also recommned that people social distance. Socially distance entails
+                        avoiding large gatherings of people.
+                    </p>
+                    <p><a class="btn btn-secondary" href="https://www.msn.com/en-us/health/medical/5-reasons-why-you-should-wear-a-mask-according-to-experts/ar-BB18IrxR" role="button">More About Masks... &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>How the Model was Developed</h2>
+                    <p>
+                        The model was developed using Tensorflow. Since this model involves predicting aspects in an image, a convolutional
+                        neural network was designed, built, trained, and then tested. The tests resulted in a 94% accuracy predicting a person
+                        in the image has a mask on and a 100% accuracy in predicting an individual was not wearing a mask or not wearing a mask
+                        properly.
+                    </p>
+                    <p><a class="btn btn-secondary" href="https://www.tensorflow.org/" role="button">More About Tensorflow... &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Contributors</h2>
+                    <p>
+                        The designers of this model and website are Fairfield University Computer Science majors; John Cain, Bibek Timalsina,
+                        Carlos Ponce, and Rian Boutin. We are all juniors and developed this model in light of the global pandemic for our
+                        Artifical Intelligence Final Project.
+                    </p>
+                    <p><a class="btn btn-secondary" href="{{ url_for('contributors') }}" role="button">More About the Developers... &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+    </div> <!-- /container -->
+
+</div>
+
+{% endblock %}
